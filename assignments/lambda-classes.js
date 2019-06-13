@@ -1,4 +1,5 @@
 // CODE here for your Lambda Classes
+//Person class
 class Person {
     constructor(attribs) {
         this.name = attribs.name;
@@ -10,6 +11,7 @@ class Person {
     }
 }
 
+// Instructor class
 class Instructor extends Person {
     constructor(inattribs) {
         super(inattribs)
@@ -25,6 +27,7 @@ class Instructor extends Person {
     }
 }
 
+// Student class
 class Student extends Person {
     constructor(stattribs) {
         super(stattribs)
@@ -43,6 +46,7 @@ class Student extends Person {
     }
 }
 
+//ProjectManagers class
 class ProjectManagers extends Instructor {
     constructor(pmattribs) {
         super(pmattribs)
@@ -57,8 +61,13 @@ class ProjectManagers extends Instructor {
     }
 }
 
+//Person objects
 const federer = new Person({
     name: 'Federer',
     age: 37,
     location: 'Switzerland'
 }) 
+
+
+//person objects testing
+console.log(federer.speak())
