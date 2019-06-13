@@ -7,7 +7,7 @@ class Person {
         this.location = attribs.location;
     }
     speak() {
-        console.log(`Hello my name is ${this.name} I am from ${this.location}`)
+        return `Hello my name is ${this.name} I am from ${this.location}`
     }
 }
 
@@ -20,10 +20,10 @@ class Instructor extends Person {
         this.catchPhrase = inattribs.catchPhrase;
     }
     demo(subject) {
-        console.log(`Today we are learning about ${subject}`)
+        return `Today we are learning about ${subject}`
     } 
     grade(student, subject) {
-        console.log(`${student} receives a perfect score on ${subject}`)
+        return `${student} receives a perfect score on ${subject}`
     }
 }
 
@@ -36,13 +36,13 @@ class Student extends Person {
         this.favSubjects = stattribs.favSubjects;
     }
     listsSubjects() {
-        console.log(`${this.favSubjects}`)
+        return `${this.favSubjects}`
     }
     PRAssignment(student, subject) {
-        `${student} has submitted a PR for ${subject}`
+        return `${student} has submitted a PR for ${subject}`
     }
     sprintChallenge(student, subject) {
-        `${student} has begun sprint challenge on ${subject}`
+        return `${student} has begun sprint challenge on ${subject}`
     }
 }
 
@@ -54,10 +54,10 @@ class ProjectManagers extends Instructor {
         this.favInstructor = pmattribs.favInstructor;
     }
     standUp(channel) {
-        `${this.name} announces to ${channel} @channel standy times!`
+        return `${this.name} announces to ${channel} @channel standy times!`
     }
     debugsCode(student, subject) {
-        `${this.name} debugs ${student}'s code on ${subject}`
+        return `${this.name} debugs ${student}'s code on ${subject}`
     }
 }
 
@@ -167,11 +167,12 @@ console.log(djokovic.speak())
 
 //Instructor Objects testing
 console.log(yoda.grade('Matt Thatcher', 'the force'))
-console.log(quigon.demo())
+console.log(quigon.demo('Tennis'))
 console.log(obi)
 
 //student objects testing
 console.log(gideon)
+console.log(matt)
 
 //Project Managers testing
 console.log(jeffrey)
