@@ -80,6 +80,16 @@ const djokovic = new Person({
     location: 'Serbia'
 }) 
 
+//Instructor Objects
+const yoda = new Instructor({
+    name: 'Yoda',
+    age: 900,
+    location: 'Dagobah',
+    specialty: 'force lifts',
+    favLanguage: 'bad english',
+    catchPhrase: 'Do or do not',
+}) 
+
 //person objects testing
 console.log(federer.name)
 console.log(nadal.speak())
