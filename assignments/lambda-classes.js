@@ -38,11 +38,11 @@ class Student extends Person {
     listsSubjects() {
         return `${this.favSubjects}`
     }
-    PRAssignment(student, subject) {
-        return `${student} has submitted a PR for ${subject}`
+    PRAssignment(subject) {
+        return `${this.name} has submitted a PR for ${subject}`
     }
-    sprintChallenge(student, subject) {
-        return `${student} has begun sprint challenge on ${subject}`
+    sprintChallenge(subject) {
+        return `${this.name} has begun sprint challenge on ${subject}`
     }
 }
 
@@ -166,16 +166,21 @@ console.log(nadal.speak())
 console.log(djokovic.speak())
 
 //Instructor Objects testing
-console.log(yoda.grade('Matt Thatcher', 'the force'))
+console.log(yoda.grade(matt.name, 'the force'))
 console.log(quigon.demo('Tennis'))
 console.log(obi)
 
 //student objects testing
 console.log(gideon)
 console.log(matt.listsSubjects())
-console.log(anakin.PRAssignment('Anakin', 'The force'))
-console.log(gideon.sprintChallenge('Gideon', 'Tennis'))
+console.log(anakin.PRAssignment('The force'))
+console.log(gideon.sprintChallenge('Tennis'))
 console.log(matt.speak())
+console.log(matt.favSubjects)
 
 //Project Managers testing
 console.log(jeffrey)
+console.log(cal.standUp('discovery'))
+console.log(jeffrey.debugsCode('Matt', 'Javascript'))
+console.log(jeffrey.grade('Matt', 'HTML'))
+console.log(cal.listsSubjects())
