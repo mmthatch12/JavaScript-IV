@@ -90,6 +90,24 @@ const yoda = new Instructor({
     catchPhrase: 'Do or do not',
 }) 
 
+const quigon = new Instructor({
+    name: 'Qui-gon',
+    age: 54,
+    location: 'Courisant',
+    specialty: 'Talent searching',
+    favLanguage: 'high english',
+    catchPhrase: 'He is the chosen one',
+}) 
+
+const obi = new Instructor({
+    name: 'Obiwan',
+    age: 32,
+    location: 'Tatooine',
+    specialty: 'lightsaber',
+    favLanguage: 'high english',
+    catchPhrase: 'You were the chosen one',
+}) 
+
 //person objects testing
 console.log(federer.name)
 console.log(nadal.speak())
@@ -97,3 +115,5 @@ console.log(djokovic.speak())
 
 //Instructor Objects testing
 console.log(yoda.grade('Matt Thatcher', 'the force'))
+console.log(quigon)
+console.log(obi)
