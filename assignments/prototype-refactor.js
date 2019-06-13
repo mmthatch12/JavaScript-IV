@@ -8,14 +8,16 @@ Prototype Refactor
 */
 
 
-function GameObject(attributes) {
-    this.createdAt = attributes.createdAt;
-    this.name = attributes.name;
-    this.dimensions = attributes.dimensions;
-  }
-  GameObject.prototype.destroy = function() {
-    return `${this.name} was removed from the game.`
-  };
+class GameObject {
+    constructor(attributes) {
+        this.createdAt = attributes.createdAt;
+        this.name = attributes.name;
+        this.dimensions = attributes.dimensions;
+    }
+    destroy () {
+        return `${this.name} was removed from the game.`
+    };
+}
   
   
   /*
@@ -25,14 +27,15 @@ function GameObject(attributes) {
     * should inherit destroy() from GameObject's prototype
   */
   
-  function CharacterStats(attributes) {
-    GameObject.call(this, attributes)
-    this.healthPoints = attributes.healthPoints;
-  }
-  CharacterStats.prototype = Object.create(GameObject.prototype)
-  CharacterStats.prototype.takeDamage = function() {
-    return `${this.name} took damage.`
-  };
+class CharacterStats extends GameObject {
+    constructor(attributes) {
+        super(attributes)
+        this.healthPoints = attributes.healthPoints;
+    }
+    takeDamage() {
+        return `${this.name} took damage.`
+    };
+}  
   
   /*
     === Humanoid (Having an appearance or character resembling that of a human.) ===
@@ -44,16 +47,17 @@ function GameObject(attributes) {
     * should inherit takeDamage() from CharacterStats
   */
   
-  function Humanoid(attributes) {
-    CharacterStats.call(this, attributes)
-    this.team = attributes.team;
-    this.weapons = attributes.weapons;
-    this.language = attributes.language;
-  }
-  Humanoid.prototype = Object.create(CharacterStats.prototype)
-  Humanoid.prototype.greet = function() {
-    return `${this.name} offers a greeting in ${this.language}.`
-  };
+class Humanoid extends CharacterStats {
+    constructor(attributes) {
+        super(attributes)
+        this.team = attributes.team;
+        this.weapons = attributes.weapons;
+        this.language = attributes.language;
+    }
+    greet() {
+        return `${this.name} offers a greeting in ${this.language}.`
+    };
+}
    
   
   
@@ -63,37 +67,37 @@ function GameObject(attributes) {
   
   // Stetch task #1 villan and hero constructor functions
   
-  function Badguy(attributes) {
-    Humanoid.call(this, attributes)
+class Badguy extends Humanoid {
+constructor(attributes) {
+    super(attributes)
     this.evilPower = attributes.evilPower;
-  }
-  
-  Badguy.prototype = Object.create(Humanoid.prototype)
-  
-  Badguy.prototype.evilPowerBlast = function (hitPoints) {
+}
+
+evilPowerBlast(hitPoints) {
     let hit = this.healthPoints - hitPoints;
     if (this.healthPoints <= 0) {
-      return `${this.name} is blasted and now only has ${hit} health`
+    return `${this.name} is blasted and now only has ${hit} health`
     } else {
-      return `${this.name} is blasted and now has ${hit} health. ${this.name} has been destroyed!`
+    return `${this.name} is blasted and now has ${hit} health. ${this.name} has been destroyed!`
     }
-  }
+}
+}
   
-  function Goodguy(attributes) {
-    Humanoid.call(this, attributes)
-    this.heroPower = attributes.heroPower;
-  }
-  
-  Goodguy.prototype = Object.create(Humanoid.prototype)
-  
-  Goodguy.prototype.heroPowerBlast = function (hitPoints) {
-    let hit = this.healthPoints - hitPoints;
-    if (hit <= 0) {
-      return `${this.name} is blasted and now only has ${hit} health`
-    } else {
-      return `${this.name} is blasted and now has ${hit} health. ${this.name} has been destroyed!`
+class Goodguy extends Humanoid {
+    constructor(attributes) {
+        super(attributes)
+        this.heroPower = attributes.heroPower;
     }
-  }
+
+    heroPowerBlast(hitPoints) {
+        let hit = this.healthPoints - hitPoints;
+        if (hit <= 0) {
+        return `${this.name} is blasted and now only has ${hit} health`
+        } else {
+        return `${this.name} is blasted and now has ${hit} health. ${this.name} has been destroyed!`
+        }
+    }
+}
   
   
   /*
@@ -192,7 +196,6 @@ function GameObject(attributes) {
       language: 'Ingles',
       heroPower: 'Turn cake into Pizza',
     });
-  
   
   
     console.log('log1:', mage.createdAt); // Today's date
