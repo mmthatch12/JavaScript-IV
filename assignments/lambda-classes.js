@@ -50,6 +50,13 @@ class Student extends Person {
     sprintChallenge(subject) {
         return `${this.name} has begun sprint challenge on ${subject}`
     }
+    graduate() {
+        if (this.grade > 70) {
+            return `${this.name} can graduate!`
+        } else {
+            return `${this.name} can't graduate!`
+        }
+    }
 }
 
 //ProjectManagers class
@@ -187,6 +194,7 @@ console.log(anakin.PRAssignment('The force'))
 console.log(gideon.sprintChallenge('Tennis'))
 console.log(matt.speak())
 console.log(matt.favSubjects)
+console.log(matt.graduate())
 
 //Project Managers testing
 console.log(jeffrey)
