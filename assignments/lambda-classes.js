@@ -172,7 +172,10 @@ console.log(obi)
 
 //student objects testing
 console.log(gideon)
-console.log(matt)
+console.log(matt.listsSubjects())
+console.log(anakin.PRAssignment('Anakin', 'The force'))
+console.log(gideon.sprintChallenge('Gideon', 'Tennis'))
+console.log(matt.speak())
 
 //Project Managers testing
 console.log(jeffrey)
