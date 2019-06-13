@@ -118,6 +118,37 @@ const anakin = new Student({
     favSubjects: ['padme', 'sand', 'lightsabers']
 }) 
 
+const matt = new Student({
+    name: 'Matt',
+    age: 30,
+    location: 'Charlieville',
+    previousBackground: 'Accountant',
+    className: 'web-21',
+    favSubjects: ['javascript', 'tennis', 'piano']
+}) 
+
+const gideon = new Student({
+    name: 'Gideon',
+    age: 21,
+    location: 'Brigham City',
+    previousBackground: 'Dancer',
+    className: 'web-18',
+    favSubjects: ['Html', 'css', 'javascript']
+}) 
+
+//PM objects
+
+const jeffrey = new ProjectManagers({
+    name: 'Jeffrey',
+    age: 23,
+    location: 'Seatle',
+    specialty: 'Javascript',
+    favLanguage: 'Javascript',
+    catchPhrase: 'You can do It!',
+    gradClassName: 'web-15',
+    favInstructor: 'Dan the Man',
+}) 
+
 //person objects testing
 console.log(federer.name)
 console.log(nadal.speak())
@@ -127,3 +158,6 @@ console.log(djokovic.speak())
 console.log(yoda.grade('Matt Thatcher', 'the force'))
 console.log(quigon)
 console.log(obi)
+
+//student objects testing
+console.log(gideon)
