@@ -25,3 +25,21 @@ class Instructor extends Person {
     }
 }
 
+class Student extends Person {
+    constructor(stattribs) {
+        super(stattribs)
+        this.previousBackground = stattribs.previousBackground;
+        this.className = stattribs.className;
+        this.favSubjects = stattribs.favSubjects;
+    }
+    listsSubjects() {
+        console.log(`${this.favSubjects}`)
+    }
+    PRAssignment(subject) {
+        `${this.name} has submitted a PR for ${subject}`
+    }
+    sprintChallenge() {
+        `${this.name} has begun sprint challenge on ${subject}`
+    }
+}
+
