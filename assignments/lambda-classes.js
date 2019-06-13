@@ -25,7 +25,10 @@ class Instructor extends Person {
     grade(student, subject) {
         return `${student} receives a perfect score on ${subject}`
     }
-
+    randAddSub(student) {
+        student.grade = Math.random() * 100
+        return `${student.name}'s grade changed to ${student.grade}`
+    }
 
 }
 
@@ -175,6 +178,7 @@ console.log(djokovic.speak())
 console.log(yoda.grade(matt.name, 'the force'))
 console.log(quigon.demo('Tennis'))
 console.log(obi)
+console.log(yoda.randAddSub(gideon))
 
 //student objects testing
 console.log(gideon)
@@ -189,4 +193,3 @@ console.log(jeffrey)
 console.log(cal.standUp('discovery'))
 console.log(jeffrey.debugsCode('Matt', 'Javascript'))
 console.log(jeffrey.grade('Matt', 'HTML'))
-console.log(cal.listsSubjects())
