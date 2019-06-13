@@ -68,6 +68,19 @@ const federer = new Person({
     location: 'Switzerland'
 }) 
 
+const nadal = new Person({
+    name: 'Nadal',
+    age: 33,
+    location: 'Spain'
+}) 
+
+const djokovic = new Person({
+    name: 'Djokovic',
+    age: 32,
+    location: 'Serbia'
+}) 
 
 //person objects testing
-console.log(federer.speak())
+console.log(federer.name)
+console.log(nadal.speak())
+console.log(djokovic.speak())
