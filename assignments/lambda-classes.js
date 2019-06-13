@@ -108,6 +108,16 @@ const obi = new Instructor({
     catchPhrase: 'You were the chosen one',
 }) 
 
+//Student objects
+const anakin = new Student({
+    name: 'Anakin',
+    age: 8,
+    location: 'Tatooine',
+    previousBackground: 'podracer',
+    className: 'web-77',
+    favSubjects: ['padme', 'sand', 'lightsabers']
+}) 
+
 //person objects testing
 console.log(federer.name)
 console.log(nadal.speak())
