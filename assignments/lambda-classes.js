@@ -23,7 +23,7 @@ class Instructor extends Person {
         console.log(`Today we are learning about ${subject}`)
     } 
     grade(student, subject) {
-        console.log(`${this.name} receives a perfect score on ${subject}`)
+        console.log(`${student} receives a perfect score on ${subject}`)
     }
 }
 
@@ -38,11 +38,11 @@ class Student extends Person {
     listsSubjects() {
         console.log(`${this.favSubjects}`)
     }
-    PRAssignment(subject) {
-        `${this.name} has submitted a PR for ${subject}`
+    PRAssignment(student, subject) {
+        `${student} has submitted a PR for ${subject}`
     }
-    sprintChallenge() {
-        `${this.name} has begun sprint challenge on ${subject}`
+    sprintChallenge(student, subject) {
+        `${student} has begun sprint challenge on ${subject}`
     }
 }
 
@@ -94,3 +94,6 @@ const yoda = new Instructor({
 console.log(federer.name)
 console.log(nadal.speak())
 console.log(djokovic.speak())
+
+//Instructor Objects testing
+console.log(yoda.grade('Matt Thatcher', 'the force'))
