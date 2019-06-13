@@ -149,6 +149,17 @@ const jeffrey = new ProjectManagers({
     favInstructor: 'Dan the Man',
 }) 
 
+const cal = new ProjectManagers({
+    name: 'Cal',
+    age: 29,
+    location: 'texas',
+    specialty: 'CSS',
+    favLanguage: 'HTML',
+    catchPhrase: 'Just wait till tomorrow',
+    gradClassName: 'web-12',
+    favInstructor: 'Austin',
+}) 
+
 //person objects testing
 console.log(federer.name)
 console.log(nadal.speak())
@@ -156,8 +167,11 @@ console.log(djokovic.speak())
 
 //Instructor Objects testing
 console.log(yoda.grade('Matt Thatcher', 'the force'))
-console.log(quigon)
+console.log(quigon.demo())
 console.log(obi)
 
 //student objects testing
 console.log(gideon)
+
+//Project Managers testing
+console.log(jeffrey)
