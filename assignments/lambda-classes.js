@@ -25,6 +25,8 @@ class Instructor extends Person {
     grade(student, subject) {
         return `${student} receives a perfect score on ${subject}`
     }
+
+
 }
 
 // Student class
@@ -34,6 +36,7 @@ class Student extends Person {
         this.previousBackground = stattribs.previousBackground;
         this.className = stattribs.className;
         this.favSubjects = stattribs.favSubjects;
+        this.grade = stattribs.grade;
     }
     listsSubjects() {
         return `${this.favSubjects}`
@@ -115,7 +118,8 @@ const anakin = new Student({
     location: 'Tatooine',
     previousBackground: 'podracer',
     className: 'web-77',
-    favSubjects: ['padme', 'sand', 'lightsabers']
+    favSubjects: ['padme', 'sand', 'lightsabers'],
+    grade: 47
 }) 
 
 const matt = new Student({
@@ -124,7 +128,8 @@ const matt = new Student({
     location: 'Charlieville',
     previousBackground: 'Accountant',
     className: 'web-21',
-    favSubjects: ['javascript', 'tennis', 'piano']
+    favSubjects: ['javascript', 'tennis', 'piano'],
+    grade: 83
 }) 
 
 const gideon = new Student({
@@ -133,7 +138,8 @@ const gideon = new Student({
     location: 'Brigham City',
     previousBackground: 'Dancer',
     className: 'web-18',
-    favSubjects: ['Html', 'css', 'javascript']
+    favSubjects: ['Html', 'css', 'javascript'],
+    grade: 97
 }) 
 
 //PM objects
