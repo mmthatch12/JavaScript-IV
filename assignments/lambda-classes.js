@@ -18,6 +18,10 @@ class Instructor extends Person {
         this.catchPhrase = inattribs.catchPhrase;
     }
     demo(subject) {
-        console.log(``)
+        console.log(`Today we are learning about ${subject}`)
     } 
+    grade(student, subject) {
+        console.log(`${this.name} receives a perfect score on ${subject}`)
+    }
 }
+
