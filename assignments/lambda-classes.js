@@ -56,3 +56,9 @@ class ProjectManagers extends Instructor {
         `${this.name} debugs ${student}'s code on ${subject}`
     }
 }
+
+const federer = new Person({
+    name: 'Federer',
+    age: 37,
+    location: 'Switzerland'
+}) 
